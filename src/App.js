@@ -10,7 +10,7 @@ class App extends Component {
         <div className="grid">
           <img
             className="logo"
-            src="https://www.nicepng.com/png/detail/205-2056186_tic-tac-toe-x-and-o.png"
+            src="https://www.pngkey.com/png/full/296-2966115_game-png-background-image-tic-tac-toe-logo.png"
           />
           <div />
           <div />

@@ -22,10 +22,11 @@ export default class Home extends Component {
                   <div className="grid ">
                     <div />
                     <div className="cinter">
-                      <h1>Welcome to Tic Tac Toe Game</h1><br/>
+                      <h1 className="welcome">Welcome to Tic Tac Toe Game</h1>
+                      <br />
                       <center>
                         <button
-                          className="btn btn btn-primary btn-circle btn-xl mb-3"
+                          className="btn  btn-primary btn-circle btn-xl mb-3"
                           onClick={() => {
                             this.setState({ redirect1: true });
                           }}
@@ -33,7 +34,7 @@ export default class Home extends Component {
                           3x3
                         </button>
                         <button
-                          className="btn btn btn-primary btn-circle btn-xl mb-3"
+                          className="btn  btn-primary btn-circle btn-xl mb-3"
                           onClick={() => {
                             this.setState({ redirect2: true });
                           }}
@@ -41,7 +42,7 @@ export default class Home extends Component {
                           5x5
                         </button>
                         <button
-                          className="btn btn btn-primary btn-circle btn-xl mb-3"
+                          className="btn  btn-primary btn-circle btn-xl mb-3"
                           onClick={() => {
                             this.setState({ redirect3: true });
                           }}
@@ -86,19 +87,6 @@ export default class Home extends Component {
                     });
                   }}
                 />
-                {/* <button
-            className="btn btn-success1 mb-3"
-            style={{ top: "0" }}
-            onClick={() => {
-              this.setState({
-                redirect1: false,
-                redirect2: false,
-                redirect3: false
-              });
-            }}
-          >
-            reset
-          </button> */}
                 <div />
               </div>
               <Game />

@@ -62,7 +62,7 @@ export default class Game extends Component {
                     <Border onClick={(i)=>this.handelClick(i)} squares={current.squares} />
                 </div>
                 <div className="game-info">
-                    <div>{statuse}</div><br/>
+                    <div className="welcome">{statuse}</div><br/>
                     <ul>{moves} </ul>
                 </div>
             </div>
