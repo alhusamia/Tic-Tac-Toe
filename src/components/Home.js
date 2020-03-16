@@ -96,7 +96,7 @@ export default class Home extends Component {
             <>
               <div className="header_grid">
                 <div />
-                <h2>5x5</h2>
+                <h2 className="h2a">5x5</h2>
                 <img
                   style={{ width: "40px", height: "40px", cursor: "pointer" }}
                   src="https://pngimage.net/wp-content/uploads/2018/06/reset-icon-png-1.png"

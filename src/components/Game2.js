@@ -65,7 +65,11 @@ export default class Game2 extends Component {
                 </div>               
             </div>
             <div className="game-info2">
-                    <div className="welcome">{statuse}</div><br/>
+                {winner ? (
+            <> <div className="hi">{statuse}</div><br/></>
+            ) : (
+                <><div className="welcome">{statuse}</div><br/></>
+            )}   
                     <ul className="ul2">{moves} </ul>
                 </div>
                 </div>
