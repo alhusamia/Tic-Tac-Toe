@@ -7,13 +7,13 @@ export default class Game extends Component {
     this.state = {
       xIsNext: true,
       stepNumber: 0,
-      history: [{ squares: Array(9).fill(null) }]
+      history: [{ squares: Array(9).fill(null) }],
     };
   }
   jumpTo(step) {
     this.setState({
       stepNumber: step,
-      xIsNext: step % 2 === 0
+      xIsNext: step % 2 === 0,
     });
   }
   handelClick(i) {
@@ -28,10 +28,10 @@ export default class Game extends Component {
     squares[i] = this.state.xIsNext ? "X" : "O";
     this.setState({
       history: history.concat({
-        squares: squares
+        squares: squares,
       }),
       xIsNext: !this.state.xIsNext,
-      stepNumber: history.length
+      stepNumber: history.length,
     });
   }
   render() {
@@ -60,19 +60,28 @@ export default class Game extends Component {
       statuse = "Next Player is " + (this.state.xIsNext ? "X" : "O");
     }
     return (
-      <div className="game">
-        <div className="game-board">
-          <Border
-            onClick={i => this.handelClick(i)}
-            squares={current.squares}
-          />
+      <div className="grid_3">
+        <div />
+        <div>
+          <div className="game-board">
+            <Border
+              onClick={(i) => this.handelClick(i)}
+              squares={current.squares}
+            />
+          </div>
         </div>
         <div className="game-info">
           {winner ? (
-           <> <div className="hi">{statuse}</div><br/></>
+            <>
+              <div className="hi">{statuse}</div>
+              <br />
+            </>
           ) : (
-            <><div className="welcome">{statuse}</div><br/></>
-          )}          
+            <>
+              <div className="welcome">{statuse}</div>
+              <br />
+            </>
+          )}
           <ul>{moves} </ul>
         </div>
       </div>
@@ -89,7 +98,7 @@ function calculateWinner(squares) {
     [1, 4, 7],
     [2, 5, 8],
     [0, 4, 8],
-    [2, 4, 6]
+    [2, 4, 6],
   ];
 
   for (let i = 0; i < lines.length; i++) {
